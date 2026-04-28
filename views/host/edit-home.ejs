@@ -1,0 +1,44 @@
+<%-include('../partials/head.ejs')%>
+<!-- <link rel="stylesheet" href="/addhome.css"> -->
+
+</head>
+
+<body class="form-page">
+
+<%-include('../partials/nav.ejs')%>
+
+<main class="form-container">
+
+<div class="form-card">
+
+<h1 class="form-title">
+Register your Home on Airbnb
+</h1>
+
+<form action="/host/<%= editing ?'edit-home':'add-home'%>" method="POST">
+
+<input type="text" name="name" placeholder="Enter your House Name" class="form-input" value="<%=editing ? home.houseName :''%>">
+
+<input type="text" name="price" placeholder="Enter Price per Night" class="form-input" value="<%=editing? home.price :''%>">
+
+<input type="text" name="location" placeholder="Enter your House Location" class="form-input" value="<%=editing? home.location :''%>">
+
+<input type="text" name="rating" placeholder="Enter your House Rating" class="form-input" value="<%=editing? home.rating :''%>">
+<!-- <textarea name="description" cols="49" class="form-input" placeholder="Enter Your House Description">
+  <%= editing && home.description ? home.description : '' %>
+</textarea> -->
+<input type="" name="description" placeholder="Enter your House Description" class="form-input" value="<%=editing? home.description :''%>">
+
+<input type="text" name="imageUrl" placeholder="Enter your House Photo URL" class="form-input" value="<%=editing? home.photoUrl :''%>">
+
+<input type="hidden" value="<%=editing? home.id:''%>" name="id">
+
+<button type="submit" class="form-btn" value="<%=editing ? 'Update' : 'Add' %> Home">Submit</button>
+
+</form>
+
+</div>
+
+</main>
+</body>
+</html>

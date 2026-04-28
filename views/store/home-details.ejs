@@ -1,0 +1,42 @@
+<%-include('../partials/head.ejs')%>
+</head>
+<body>
+<%-include('../partials/nav.ejs')%>
+
+<main class="details-page">
+
+<h2 class="details-title">
+    Details of <%= home.houseName %>
+</h2>
+
+<div class="details-card">
+
+    <div class="details-image">
+        <img src="<%=home.photoUrl%>" alt="<%=home.houseName%>">
+    </div>
+
+    <div class="details-info">
+
+        <div class="details-item">
+            <h3>Location</h3>
+            <p><%=home.location%></p>
+        </div>
+
+        <div class="details-item">
+            <h3>Price</h3>
+            <p class="details-price">$<%=home.price%></p>
+        </div>
+
+        <p class="home-rating">⭐ <%= home.rating %> / 5</p>
+        <p class="home-rating"> <%= home.description %></p>
+
+       <%-include('../partials/favourite.ejs')%>
+
+    </div>
+
+</div>
+
+</main>
+
+</body>
+</html>

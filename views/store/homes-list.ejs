@@ -1,0 +1,41 @@
+<%-include('../partials/head.ejs')%>
+  </head>
+  <body>
+    <%-include('../partials/nav.ejs')%>
+    <main>
+      <h2>Available Homes</h2>
+
+      <ul class="homes-list">
+
+        <% homes.forEach((home)=>{ %>
+
+          <li class="home-card">
+ 
+            <img src="<%= home.photoUrl %>" alt="home image" class="home-img">
+
+            <div class="home-info">
+              <h3 class="home-title"><%= home.houseName %></h3>
+
+              <p class="home-location">📍 <%= home.location %></p>
+
+              <p class="home-rating">⭐ <%= home.rating %> / 5</p>
+
+              <p class="home-price">$<%= home.price %> / night</p>
+              <p class="home-price"><%= home.description %></p>
+
+              <!-- Details Button -->
+              <a href="/homes/<%=home.id%>" class="details-btn">
+                View Details
+              </a>
+<%-include('../partials/favourite.ejs',{home:home})%>
+            </div>
+
+          </li>
+            
+        <% }) %>
+
+      </ul>
+
+    </main>
+  </body>
+</html>

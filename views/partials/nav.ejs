@@ -1,0 +1,72 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a 
+          href="/" 
+          class="<%= currentPage === 'Home' ? 'active' : '' %>"
+        >
+          Go to Home
+        </a>
+      </li>
+
+      <li>
+        <a 
+          href="/host/edit-home"
+          class="<%= currentPage === 'AddHome' ? 'active' : '' %>"
+        >
+          Add Home
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/homes-list"
+          class="<%= currentPage === 'homesList' ? 'active' : '' %>"
+        >
+          Home List
+        </a>
+      </li>
+      
+      <li>
+        <a 
+          href="/favourite-list"
+          class="<%= currentPage === 'favouriteList' ? 'active' : '' %>"
+        >
+          Favourite List
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/reserve"
+          class="<%= currentPage === 'reserve' ? 'active' : '' %>"
+        >
+          Reserve
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/bookings"
+          class="<%= currentPage === 'bookings' ? 'active' : '' %>"
+        >
+          Bookings
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/host/edit-home"
+          class="<%= currentPage === 'editHome' ? 'active' : '' %>"
+        >
+          Edit Home
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/host/host-home-list"
+          class="<%= currentPage === 'hostHomeList' ? 'active' : '' %>"
+        >
+          Host Home List
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
