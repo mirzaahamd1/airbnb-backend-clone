@@ -4,7 +4,7 @@
     <%- include('../partials/nav') %>
     <main class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 max-w-6xl">
       <h2 class="text-3xl text-red-500 font-bold text-center mb-6">
-        Hey Host! Here are your homes:
+        Welcome to airbnb index page:
       </h2>
       <div class="flex flex-wrap justify-center gap-6">
         <% registeredHomes.forEach(home => { %>
@@ -22,10 +22,7 @@
                   <span class="text-gray-700"><%= home.rating %></span>
                 </div>
               </div>
-              <a href="/host/edit-home/<%=home._id%>?editing=true" class="bg-blue-500 p-2">Edit</a>
-              <form action="/host/delete-home/<%= home._id %>" method="POST">
-                <button type="submit" class="bg-red-500 p-2">Delete</button>
-              </form>
+              <button class="bg-green-300 p-2">Book</button>
             </div>
           </div>
         <% }) %>
